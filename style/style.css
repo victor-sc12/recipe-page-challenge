@@ -29,10 +29,75 @@ body {
     font-family: var(--font-outfit);
     font-optical-sizing: auto;
     font-style: normal;
+    
+    /* Box model */
+    margin: 0;
+}
+
+.recipe {
+    padding: 0 2rem;
+}
+
+.recipe__img--main {
+    max-width: 100%;
+}
+
+.recipe__paragraph,
+.recipe__list,
+.recipe__table {
+    font-size: 1.6rem;
+    color: var(--hsl-stone-color-600);
+}
+
+.recipe__title--main,
+.recipe__title--section {
+    font-family: var(--font-young-serif-regular);
+}
+
+.recipe__title--main {
+    font-size: 2.5rem;
+}
+
+.recipe__title--section {
+    font-size: 2rem;
+    color: var(--hsl-brown-color-800);
+}
+
+.recipe__section--preparation {
+    background-color: var(--hsl-rose-color-50);
+    padding: 1rem;
+}
+
+.recipe__title--preparation {
+    font-size: 1.8rem;
+    color: var(--hsl-rose-color-800);
+}
+
+.recipe__item::marker {
+    color: var(--hsl-brown-color-800);
+    font-weight: 600;
+}
+
+.item-subtitle {
+    color: var(--hsl-stone-color-900);
+    font-weight: 600;
+}
+
+.recipe__table {
+    width: 100%;
+}
+
+.recipe__cell {
+    border-bottom: .1rem solid black;
+}
+
+.recipe__cell--quantity {
+    color: var(--hsl-brown-color-800);
+    font-weight: 600;
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 1.1rem;
     text-align: center;
 }
 
