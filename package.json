@@ -1,0 +1,25 @@
+{
+  "name": "recipe-page-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Recipe page coding challenge](./preview.jpg)",
+  "homepage": "https://github.com/victor-sc12/recipe-page-challenge#readme",
+  "bugs": {
+    "url": "https://github.com/victor-sc12/recipe-page-challenge/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor-sc12/recipe-page-challenge.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.97.3"
+  }
+}
