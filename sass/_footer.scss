@@ -1,0 +1,14 @@
+@use 'variables' as v;
+
+/* Footer rules */
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+
+    padding: 1.2rem 0;
+}
+
+.attribution a {
+    color: v.$hsl-brown-color-800;
+}

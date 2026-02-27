@@ -1,0 +1,9 @@
+@use 'variables' as v;
+
+/* Header rules */
+.recipe__title {
+    &--main {
+        font-family: v.$font-young-serif-regular;
+        font-size: 2.5rem;
+    }
+}

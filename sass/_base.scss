@@ -1,0 +1,79 @@
+@use 'variables' as v;
+
+/* Global rules */
+
+:root {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    // Fonts
+    font-family: v.$font-outfit;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+    // Box model
+    margin: 0;
+}
+
+main {
+    background-color: v.$hsl-stone-color-100;
+    
+    @media (width > 600px) {
+        padding: 5rem 0;
+    }
+}
+
+/* Global 'recipe' rules */
+.recipe {
+    background-color: v.$hsl-white-color;
+
+    @media (width > 600px) {
+        max-width: 70rem;
+        margin: auto;
+        border-radius: 1.5rem;
+    }
+
+    &__content {
+        padding: 0 3rem;
+    }
+
+    &__title {
+        &--section {
+            font-family: v.$font-young-serif-regular;
+            font-size: 2rem;
+            color: v.$hsl-brown-color-800;
+        }
+    }
+
+    &__paragraph {
+        font-size: 1.6rem;
+        color: v.$hsl-stone-color-600;
+    }
+
+    &__list {
+        padding-left: 2rem;
+        font-size: 1.6rem;
+        color: v.$hsl-stone-color-600;
+    }
+
+    &__item {
+        padding: 0 0 1rem 1rem;
+
+        &::marker {
+            color: v.$hsl-brown-color-800;
+            font-weight: 600;
+        }
+    }
+}
+
+.item-subtitle {
+    color: v.$hsl-stone-color-900;
+    font-weight: 600;
+}

@@ -1,0 +1,18 @@
+/* Hero rules */
+.recipe__hero {
+    width: 100%;
+
+    @media (width > 600px) {
+        padding: 3rem 3rem 0 3rem;
+    }
+}
+
+.recipe__img {
+    &--main {
+        max-width: 100%;
+
+        @media (width > 600px) {
+            border-radius: 1rem;
+        }
+    }
+}

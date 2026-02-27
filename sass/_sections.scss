@@ -1,0 +1,58 @@
+@use 'variables' as v;
+
+/* Preparation Section Rules */
+.recipe__section { 
+    &--preparation {
+        background-color: v.$hsl-rose-color-50;
+
+        // box-model design
+        margin-top: 2.5rem;
+        padding: .1rem 3rem;
+        border-radius: 1rem;
+    }
+}
+
+.recipe__title {
+    &--preparation {
+        font-size: 1.8rem;
+        color: v.$hsl-rose-color-800;
+    }
+}
+
+/* Nutrition Section Rules */
+.recipe__table {
+    font-size: 1.6rem;
+    color: v.$hsl-stone-color-600;
+    margin-top: 2.5rem;
+    width: 100%;
+
+    &--grid-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1rem;
+        justify-content: center;
+    }
+}
+
+.recipe__cell {
+    border-bottom: .1rem solid v.$hsl-stone-color-600;
+    padding-bottom: 1rem;
+    
+    &--nutrients {
+        text-align: center;
+
+        @media (width > 600px) {
+            padding-left: 2rem;
+            text-align: initial;
+        }
+    }
+
+    &--quantity {
+        color: v.$hsl-brown-color-800;
+        font-weight: 600;
+    }
+
+    &--last-row-cell {
+        border: 0;
+    }
+}
