@@ -1,3 +1,5 @@
+/* Global rules */
+
 :root {
     /* Color custom properties */
     --hsl-white-color: hsl(0, 0%, 100%);
@@ -39,15 +41,17 @@ body {
 main {
     background-color: var(--hsl-stone-color-100);
     
-    @media (width > 600px) {
+    @media (min-width: 600px) {
         padding: 5rem 0;
     }
 }
 
+
+/* Container Rules  */
 .recipe {
     background-color: var(--hsl-white-color);
 
-    @media (width > 600px) {
+    @media (min-width: 600px) {
         max-width: 70rem;
         margin: auto;
         border-radius: 1.5rem;
@@ -61,10 +65,11 @@ main {
     color: var(--hsl-stone-color-600);
 }
 
+/* Hero rules */
 .recipe__hero {
     width: 100%;
 
-    @media (width > 600px) {
+    @media (min-width: 600px) {
         padding: 3rem 3rem 0 3rem;
     }
 }
@@ -72,11 +77,12 @@ main {
 .recipe__img--main {
     max-width: 100%;
 
-    @media (width > 600px) {
+    @media (min-width: 600px) {
         border-radius: 1rem;
     }
 }
 
+/* Text content Rules */
 .recipe__content {
     padding: 0 3rem;
 }
@@ -93,6 +99,15 @@ main {
 .recipe__title--section {
     font-size: 2rem;
     color: var(--hsl-brown-color-800);
+}
+
+/* Section rules  */
+.recipe__section {
+    border-bottom: .1rem solid var(--hsl-stone-color-600);
+    
+    &:is(:first-of-type, :last-of-type) {
+        border-bottom: initial;
+    }
 }
 
 .recipe__section--preparation {
@@ -128,26 +143,28 @@ main {
 }
 
 .recipe__table {
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     width: 100%;
+    border-collapse: collapse;
 }
 
-.recipe__table--grid-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 1rem;
-    justify-content: center;
+.recipe__col {
+    width: 50%;
 }
 
 .recipe__cell {
     border-bottom: .1rem solid var(--hsl-stone-color-600);
-    padding-bottom: 1rem;
+    padding: 1rem 0;
+
+    .recipe__row:last-of-type & {
+        border-bottom: initial;
+    } 
 }
 
-.recipe__cell--nutrients {
+.recipe__cell--nutrient {
     text-align: center;
 
-    @media (width > 600px) {
+    @media (min-width: 600px) {
         padding-left: 2rem;
         text-align: initial;
     }
@@ -156,10 +173,6 @@ main {
 .recipe__cell--quantity {
     color: var(--hsl-brown-color-800);
     font-weight: 600;
-}
-
-.recipe__cell--last-row-cell {
-    border: 0;
 }
 
 .attribution {
